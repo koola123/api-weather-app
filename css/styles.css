@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box; /* Padding and border included in total width and height of elements*/
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+form, #weather {
+  width: 100%;
+  max-width: 50%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+input[type="text"] {
+  display: inline-block;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  border-bottom: 2px solid #888;
+  font-size: 1.2rem;
+  padding: 5px 0px;
+}
+
+input[type="text"]:focus {
+  border-color: #f1356d;
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+ul li {
+  background: #333;
+  margin: 2px;
+  padding: 10px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+ul li span {
+  color: steelblue;
+}
+
+#city {
+  color: #66FF00;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+img {
+  margin-bottom: -30px;
+}
+
+#degrees {
+  font-size: 5rem;
+  margin-bottom: 0.3rem;
+}
+
+button#change {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 1.3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+div.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+div.info h3 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+div.info div.value {
+  color: lime;
+  font-size: 2rem;
+}
+
+div.info div.value span {
+  color: lime;
+  font-size: 1.3rem;
+  padding: 0 0 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+  #degrees {
+    font-size: 3.7rem;
+    margin-bottom: 0.3rem;
+  }
+  #city {
+    color: #66FF00;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  div.info{
+      grid-template-columns: 1fr;
+      overflow: hidden;
+  }
+  div.info h3 {
+    font-size: 1rem;
+  }
+  div.info div.value {
+    color: #66FF00;
+    font-size: 2rem;
+  }
+  div.info div.value span {
+    color: #66FF00;
+    font-size: 1rem;
+  }
+}
